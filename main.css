@@ -1,20 +1,24 @@
 
 
-header {
-    margin-top: 40px;
-    margin-bottom: 40px;
+:root {
+    --main-color: #20355B;
+    --sub-color: #314f86;
+    --accent-color: #E7BC72;
+    --text-color: #FCEEF6;
+    --highlight-color: #9ED8DB;
 }
 
-header nav {
+/* header nav {
     display: grid;
     grid-template-columns: 1fr 3fr 100px;
     gap: 20px;
     font-size: 20px;
 }
 
-main {
-    height: auto;
-}
+header nav a img {
+    width: 100px;
+    margin-left: 50px;
+} */
 
 /* Nav Links (nav > ul > li > a)*/
 .navlink:link,
@@ -34,11 +38,10 @@ header .navlink[href="#"] {
     color: #9ED8DB;
 }
 
-#linkNav {
+/* #linkNav {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* grid-template-rows: 100px; */
-}
+} */
 
 .intro-section {
     padding: 30px;
@@ -51,7 +54,7 @@ header .navlink[href="#"] {
     vertical-align: top;
 }
 
-.name-section > p {
+.name-section>p {
     font-size: 36px;
     font-weight: 700;
     color: #74636c;
@@ -450,9 +453,6 @@ header .navlink[href="#"] {
     display: block;
     color: #fceef6;
 }
-
-
-
 
 footer {
     height: 150px;
