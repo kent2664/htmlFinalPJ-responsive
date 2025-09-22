@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../common.css">
     <link rel="stylesheet" href="../main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Development</title>
     <style>
         header nav a img {
@@ -15,22 +17,31 @@
 </head>
 
 <body style="background-color:#20355B;">
-    <header>
-        <nav aria-label="Primary navigation">
-            <a href="../index.html">
-                <img src="../assets/images/logo.png" alt="Logo">
+    <header class=" bg-[--bg-color] p-4 fixed top-0 w-full z-10">
+        <nav aria-label="Primary navigation" class="flex justify-between items-center md:flex-row ">
+            <a href="#">
+                <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto md:h-9 md:min-w-[100px]">
             </a>
-            <ul id="linkNav">
-                <li><a href="../index.html" class="navlink">Home</a></li>
-                <li><a href="#" class="navlink" id="current-page">Development</a></li>
-                <li><a href="./collections.html" class="navlink">Collections</a></li>
-                <li><a href="./contact.html" class="navlink">Contact</a></li>
+            <label for="nav-toggle"
+                class="md:hidden inline-flex h-9 w-9 items-center justify-center z-20 cursor-pointer"
+                aria-label="Open menu">
+                <svg class="h-8 w-8 text-[var(--accent-color)]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    aria-hidden="true">
+                    <path d="M4 6h20M4 12h20M4 18h20" />
+                </svg>
+            </label>
+            <ul class="hidden md:flex md:flex-row md:justify-between md:space-x-16 md:w-full md:px-[10rem]"
+                id="linkNav">
+                <li><a href="../index.html" class="navlink flex-1" id="current-page">Home</a></li>
+                <li><a href="#" class="navlink flex-1">Development</a></li>
+                <li><a href="collections.html" class="navlink flex-1">Collections</a></li>
+                <li><a href="contact.html" class="navlink flex-1 mr-10">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <div class="dev-title">
-            <h2>Development Experience</h2>
+    <main class="mt-10">
+        <div class="text-[var(--accent-color)] font-bold text-center mb-5 mt-[10rem]">
+            <h2 class="text-3xl lg:text-5xl">Development Experience</h2>
         </div>
         <div class="stuck-table">
             <span class="languages">
@@ -57,20 +68,68 @@
         <div class="experience-table">
             <table>
                 <tbody>
-                    <tr>
+                    <tr class="accordion-header cursor-pointer" data-target="#content-1" onclick="toggleAccordion(1);">
                         <th> 2014</th>
                         <td> Join the RKKCS</td>
                         <td> Junior Programmer</td>
+                        <td><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                        </td>
                     </tr>
-                    <tr>
+                    <tr id="content-1" class="accordion-content hidden text-left">
+                        <td colspan="4" class="p-4 bg-[var(--sub-color)] text-[var(--text-color)] border-b">
+                            <strong>Tech stack:</strong>
+                            <ul class="list-disc list-outside ml-6">
+                                <li>Backend & Framework: Java (Struts)</li>
+                                <li>Database: Oracle SQL</li>
+                                <li>Frontend: HTML, CSS, JSP</li>
+                                <li>Version Control: Tortoise SVN</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="accordion-header cursor-pointer" data-target="#content-1" onclick="toggleAccordion(2);">
                         <th> 2018</th>
                         <td> Named a leader of the OJT development team</td>
                         <td> Lead Programmer</td>
+                        <td><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                        </td>
                     </tr>
-                    <tr>
+                    <tr id="content-2" class="accordion-content hidden">
+                        <td colspan="4" class="p-4 bg-[var(--sub-color)] text-[var(--text-color)] border-b">
+                            <strong>Tech stack:</strong>
+                            <ul class="list-disc list-outside ml-6">
+                                <li>Backend & Framework: Java (Struts)</li>
+                                <li>Database: Oracle SQL</li>
+                                <li>Frontend: HTML, CSS, JSP</li>
+                                <li>Version Control: Tortoise SVN</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="accordion-header cursor-pointer" data-target="#content-1" onclick="toggleAccordion(3);">
                         <th> 2020</th>
                         <td> To be seconded to a group company</td>
                         <td> Lead Programmer / Sub manager</td>
+                        <td><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr id="content-3" class="accordion-content hidden">
+                        <td colspan="4" class="p-4 bg-[var(--sub-color)] text-[var(--text-color)] border-b">
+                            <strong>Tech stack:</strong>
+                            <ul class="list-disc list-outside ml-6">
+                                <li>Backend & Framework: Java (Struts)</li>
+                                <li>Database: Oracle SQL</li>
+                                <li>Frontend: HTML, CSS, JSP</li>
+                                <li>Version Control: Tortoise SVN</li>
+                            </ul>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -89,6 +148,7 @@
         <span style="vertical-align: bottom;">&copy; 2025 My Website.</span>
 
     </footer>
+    <script src="../script.js"></script>
 </body>
 
 </html>

@@ -4,41 +4,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../common.css">
     <link rel="stylesheet" href="../main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>collections</title>
-    <style>
-        header nav a img {
-            width: 100px;
-            margin-left: 50px
-        }
-    </style>
 </head>
 
-<body style="background-color:#20355B;">
-    <header>
-        <nav aria-label="Primary navigation">
-            <a href="../index.html">
-                <img src="../assets/images/logo.png" alt="Logo">
+<body class="bg-[var(--main-color)]">
+    <header class=" bg-[--bg-color] p-4 fixed top-0 w-full z-10">
+        <nav aria-label="Primary navigation" class="flex justify-between items-center md:flex-row ">
+            <a href="#">
+                <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto md:h-9 md:min-w-[100px]">
             </a>
-            <ul id="linkNav">
-                <li><a href="../index.html" class="navlink">Home</a></li>
-                <li><a href="./development.html" class="navlink">Development</a></li>
-                <li><a href="#" class="navlink" id="current-page">Collections</a></li>
-                <li><a href="./contact.html" class="navlink">Contact</a></li>
+            <label for="nav-toggle"
+                class="md:hidden inline-flex h-9 w-9 items-center justify-center z-20 cursor-pointer"
+                aria-label="Open menu">
+                <svg class="h-8 w-8 text-[var(--accent-color)]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    aria-hidden="true">
+                    <path d="M4 6h20M4 12h20M4 18h20" />
+                </svg>
+            </label>
+            <ul class="hidden md:flex md:flex-row md:justify-between md:space-x-16 md:w-full md:px-[10rem]"
+                id="linkNav">
+                <li><a href="../index.html" class="navlink flex-1" id="current-page">Home</a></li>
+                <li><a href="development.html" class="navlink flex-1">Development</a></li>
+                <li><a href="#" class="navlink flex-1">Collections</a></li>
+                <li><a href="contact.html" class="navlink flex-1 mr-10">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <div class="collection-title">
-            <h2>Photographs</h2>
+    <main class="mt-10">
+        <div class="text-[var(--accent-color)] font-bold text-center mb-5 mt-[10rem]">
+            <h2 class="text-3xl lg:text-5xl">Photographs</h2>
         </div>
-        <div class="photographs">
-            <img id="imageMain1" src="../assets/images/DSC08872.jpg">
-            <img id="imageSub1" src="../assets/images/DSC02498.jpg">
-            <img id="imageSub2" src="../assets/images/DSC03774.jpg">
-            <img id="imageMain2" src="../assets/images/DSC02774.jpg">
-            <img id="imageSub4" src="../assets/images/DSC01301.jpg">
-            <img id="imageSub5" src="../assets/images/DSC00258.jpg">
+        <div class="p-4 max-w-7xl mx-auto">
+            <div class="columns-2 lg:columns-4 gap-4">
+
+                <div class="mb-4 break-inside-avoid">
+                    <img src="../assets/images/240818_10.jpg" class="w-full h-auto object-cover rounded-lg shadow-md"
+                        style="height: 400px;" alt="photo 1" />
+                </div>
+
+                <div class="mb-4 break-inside-avoid">
+                    <img src="../assets/images/DSC02498.jpg" class="w-full h-auto object-cover rounded-lg shadow-md"
+                        style="height: 300px;" alt="photo 2" />
+                </div>
+
+                <div class="mb-4 break-inside-avoid">
+                    <img src="../assets/images/DSC02774.jpg" class="w-full h-auto object-cover rounded-lg shadow-md"
+                        style="height: 600px;" alt="photo 3" />
+                </div>
+
+                <div class="mb-4 break-inside-avoid">
+                    <img src="../assets/images/DSC08872.jpg" class="w-full h-auto object-cover rounded-lg shadow-md"
+                        style="height: 350px;" alt="photo 4" />
+                </div>
+
+                <div class="mb-4 break-inside-avoid">
+                    <img src="../assets/images/DSC09261.jpg" class="w-full h-auto object-cover rounded-lg shadow-md"
+                        style="height: 300px;" alt="photo 5" />
+                </div>
+
+                <div class="mb-4 break-inside-avoid">
+                    <img src="../assets/images/DSC00654-2.jpg" class="w-full h-auto object-cover rounded-lg shadow-md"
+                        style="height: 420px;" alt="photo 6" />
+                </div>
+
+                <div class="mb-4 break-inside-avoid">
+                    <img src="../assets/images/DSC03167.jpg" class="w-full h-auto object-cover rounded-lg shadow-md"
+                        style="height: 360px;" alt="photo 7" />
+                </div>
+
+                <div class="mb-4 break-inside-avoid">
+                    <img src="../assets/images/DSC00258.jpg" class="w-full h-auto object-cover rounded-lg shadow-md"
+                        style="height: 450px;" alt="photo 8" />
+                </div>
+
+                <div class="mb-4 break-inside-avoid">
+                    <img src="../assets/images/DSC01301.jpg" class="w-full h-auto object-cover rounded-lg shadow-md"
+                        style="height: 320px;" alt="photo 9" />
+                </div>
+
+                <div class="mb-4 break-inside-avoid">
+                    <img src="../assets/images/DSC03774.jpg" class="w-full h-auto object-cover rounded-lg shadow-md"
+                        style="height: 480px;" alt="photo 10" />
+                </div>
+            </div>
         </div>
     </main>
     <footer>

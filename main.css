@@ -1,12 +1,6 @@
 
 
-:root {
-    --main-color: #20355B;
-    --sub-color: #314f86;
-    --accent-color: #E7BC72;
-    --text-color: #FCEEF6;
-    --highlight-color: #9ED8DB;
-}
+
 
 /* header nav {
     display: grid;
@@ -43,11 +37,7 @@ header .navlink[href="#"] {
     grid-template-columns: repeat(4, 1fr);
 } */
 
-.intro-section {
-    padding: 30px;
-}
-
-.name-section {
+/* .name-section {
     padding: 100px 200px;
     display: inline-block;
     height: 600px;
@@ -105,29 +95,14 @@ header .navlink[href="#"] {
 .button-section {
     margin-top: 40px;
     margin-right: 30px;
-}
+}*/
 
 .button-section button[type="submit"]:hover {
     color: #28f4ff;
     border-color: #28f4ff;
     border-width: 6px;
     box-shadow: 1px 1px 20px #87f9ff;
-}
-
-.button-section h4 {
-    float: left;
-    color: #74636c;
-    font-family: "Roboto", sans-serif;
-}
-
-#jump-dev {
-    clear: both;
-    float: left;
-}
-
-#jump-coll {
-    float: right;
-}
+} 
 
 #experience {
     clear: both;
@@ -140,7 +115,7 @@ header .navlink[href="#"] {
     color: #FCEEF6;
 }
 
-.button-section button[type="submit"] {
+/* .button-section button[type="submit"] {
     height: 70px;
     width: 200px;
     font-size: 18px;
@@ -149,54 +124,16 @@ header .navlink[href="#"] {
     border: 3px solid #9ED8DB;
     border-radius: 15px;
     background-color: transparent;
-}
+} */
 
-.ability-section,
-.collection-section,
 #form-contact {
     display: block;
     padding: 30px 30px;
     margin-top: 50px;
 }
 
-.ability-section h2,
-.collection-section h2 {
-    text-align: center;
-    font-size: 32px;
-    color: #E7BC72;
-    font-family: "Roboto", sans-serif;
-    margin: 30px;
-}
 
-.ablity-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 60px;
-}
-
-.skills {
-    padding: 30px;
-    height: 400px;
-    width: 350px;
-    border-radius: 30px;
-    background-color: #2c477a;
-}
-
-.skill-title {
-    text-align: center;
-    font-size: 24px;
-    color: #c49236;
-    margin-bottom: 30px;
-}
-
-.skill-detail {
-    font-size: 20px;
-    color: #FCEEF6;
-}
-
-.collection {
+/* .collection {
     background-color: #2c477a;
     display: flex;
     flex-direction: row;
@@ -216,17 +153,9 @@ header .navlink[href="#"] {
     height: 450px;
     border-radius: 15px;
     box-shadow: 3px 3px 8px #16233b;
-}
+} */
 
-.collection img:hover {
-    box-shadow: 5px 5px 20px #16233b;
-    transform: scale(1.15);
-    z-index: 3;
-}
-
-.dev-title h2,
-.collection-title h2,
-.contact-title h2 {
+.dev-title {
     margin-top: 100px;
     font-size: 54px;
     color: #E7BC72;
@@ -313,56 +242,6 @@ header .navlink[href="#"] {
 
 .experience-table table tbody tr:last-child td:last-child {
     border-bottom-right-radius: 10px;
-}
-
-.photographs {
-    display: grid;
-    grid-template-areas:
-        "imageMain1 imageMain1 imageMain1 imageMain1"
-        "imageSub1 imageSub1 imageSub2 imageSub2"
-        ". imageMain2 imageMain2  ."
-        ". imageMain2 imageMain2 ."
-        "imageSub3 . . imageSub4";
-
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
-    grid-gap: 80px;
-    background-color: #2c477a;
-    margin: 50px 100px;
-    padding: 40px;
-    height: 100%;
-    width: 90%;
-    border-radius: 15px;
-}
-
-.photographs img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-#imageMain1 {
-    grid-area: imageMain1;
-}
-
-#imageSub1 {
-    grid-area: imageSub1;
-}
-
-#imageSub2 {
-    grid-area: imageSub2;
-}
-
-#imageSub3 {
-    grid-area: imageSub3;
-}
-
-#imageSub4 {
-    grid-area: imageSub4;
-}
-
-#imageMain2 {
-    grid-area: imageMain2;
 }
 
 #form-contact {

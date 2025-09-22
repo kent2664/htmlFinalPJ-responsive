@@ -4,27 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>contact</title>
-    <style>
-        header nav a img {
-            width: 100px;
-            margin-left: 50px
-        }
-    </style>
+
 </head>
 
 <body style="background-color:#20355B;">
-    <header>
-        <nav aria-label="Primary navigation">
-            <a href="./index.html">
-                <img src="./assets/images/logo.png" alt="Logo">
+    <header class=" bg-[--bg-color] p-4 fixed top-0 w-full z-10">
+        <nav aria-label="Primary navigation" class="flex justify-between items-center md:flex-row ">
+            <a href="#">
+                <img src="./assets/images/logo.png" alt="Logo" class="h-8 w-auto md:h-9 md:min-w-[100px]">
             </a>
-            <ul id="linkNav">
-                <li><a href="./index.html" class="navlink" id="current-page">Home</a></li>
-                <li><a href="./pages/development.html" class="navlink">Development</a></li>
-                <li><a href="./pages/collections.html" class="navlink">Collections</a></li>
-                <li><a href="./pages/contact.html" class="navlink">Contact</a></li>
+            <label for="nav-toggle"
+                class="md:hidden inline-flex h-9 w-9 items-center justify-center z-20 cursor-pointer"
+                aria-label="Open menu">
+                <svg class="h-8 w-8 text-[var(--accent-color)]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    aria-hidden="true">
+                    <path d="M4 6h20M4 12h20M4 18h20" />
+                </svg>
+            </label>
+            <ul class="hidden md:flex md:flex-row md:justify-between md:space-x-16 md:w-full md:px-[10rem]" id="linkNav">
+                <li><a href="#" class="navlink flex-1" id="current-page">Home</a></li>
+                <li><a href="./pages/development.html" class="navlink flex-1">Development</a></li>
+                <li><a href="./pages/collections.html" class="navlink flex-1">Collections</a></li>
+                <li><a href="./pages/contact.html" class="navlink flex-1 mr-10">Contact</a></li>
             </ul>
         </nav>
     </header>
