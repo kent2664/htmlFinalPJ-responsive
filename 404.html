@@ -14,23 +14,30 @@
 <body style="background-color:#20355B;">
     <header class=" bg-[--bg-color] p-4 fixed top-0 w-full z-10">
         <nav aria-label="Primary navigation" class="flex justify-between items-center md:flex-row ">
-            <a href="#">
+            <a href="../index.html">
                 <img src="./assets/images/logo.png" alt="Logo" class="h-8 w-auto md:h-9 md:min-w-[100px]">
             </a>
-            <label for="nav-toggle"
-                class="md:hidden inline-flex h-9 w-9 items-center justify-center z-20 cursor-pointer"
+            <label for="nav-toggle" id="nav-toggle"
+                class="fixed md:hidden top-4 left-4 block w-8 h-8 cursor-pointer hamburger-icon relative z-50"
                 aria-label="Open menu">
-                <svg class="h-8 w-8 text-[var(--accent-color)]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    aria-hidden="true">
-                    <path d="M4 6h20M4 12h20M4 18h20" />
-                </svg>
+                 <span class="block absolute top-0 left-0 w-6 h-1 bg-[var(--accent-color)] rounded-xl duration-300 transform -translate-x-1/2 -translate-y-1/2 peer-checked:opacity-0 "></span>
             </label>
-            <ul class="hidden md:flex md:flex-row md:justify-between md:space-x-16 md:w-full md:px-[10rem]" id="linkNav">
-                <li><a href="#" class="navlink flex-1" id="current-page">Home</a></li>
+            <ul class="hidden md:flex md:flex-row md:justify-between md:space-x-16 md:w-full md:px-[10rem]"
+                id="linkNav">
+                <li><a href="./index.html" class="navlink flex-1" id="current-page">Home</a></li>
                 <li><a href="./pages/development.html" class="navlink flex-1">Development</a></li>
                 <li><a href="./pages/collections.html" class="navlink flex-1">Collections</a></li>
                 <li><a href="./pages/contact.html" class="navlink flex-1 mr-10">Contact</a></li>
             </ul>
+            <div id="menu-container"
+                class="fixed inset-0 bg-black bg-opacity-70 transform -translate-x-full transition-transform duration-500 ease-in-out z-40">
+                <ul class="flex flex-col items-center h-full space-y-8 text-white text-2xl font-bold mt-32">
+                    <li><a href="./index.html" class="hover:text-gray-300">Home</a></li>
+                    <li><a href="./pages/development.html" class="hover:text-gray-300">Development</a></li>
+                    <li><a href="./pages/collections.html" class="hover:text-gray-300">Collections</a></li>
+                    <li><a href="./pages/contact.html" class="hover:text-gray-300">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>

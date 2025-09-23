@@ -29,20 +29,27 @@
             <a href="#">
                 <img src="./assets/images/logo.png" alt="Logo" class="h-8 w-auto md:h-9 md:min-w-[100px]">
             </a>
-            <label for="nav-toggle"
-                class="md:hidden inline-flex h-9 w-9 items-center justify-center z-20 cursor-pointer"
+            <label for="nav-toggle" id="nav-toggle"
+                class="fixed md:hidden top-4 left-4 block w-8 h-8 cursor-pointer hamburger-icon relative z-50"
                 aria-label="Open menu">
-                <svg class="h-8 w-8 text-[var(--accent-color)]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    aria-hidden="true">
-                    <path d="M4 6h20M4 12h20M4 18h20" />
-                </svg>
+                 <span class="block absolute top-0 left-0 w-6 h-1 bg-[var(--accent-color)] rounded-xl duration-300 transform -translate-x-1/2 -translate-y-1/2 peer-checked:opacity-0 "></span>
             </label>
-            <ul class="hidden md:flex md:flex-row md:justify-between md:space-x-16 md:w-full md:px-[10rem]" id="linkNav">
+            <ul class="hidden md:flex md:flex-row md:justify-between md:space-x-16 md:w-full md:px-[10rem]"
+                id="linkNav">
                 <li><a href="#" class="navlink flex-1" id="current-page">Home</a></li>
                 <li><a href="./pages/development.html" class="navlink flex-1">Development</a></li>
                 <li><a href="./pages/collections.html" class="navlink flex-1">Collections</a></li>
                 <li><a href="./pages/contact.html" class="navlink flex-1 mr-10">Contact</a></li>
             </ul>
+            <div id="menu-container"
+                class="fixed inset-0 bg-black bg-opacity-70 transform -translate-x-full transition-transform duration-500 ease-in-out z-40">
+                <ul class="flex flex-col items-center h-full space-y-8 text-white text-2xl font-bold mt-32">
+                    <li><a href="./index.html" class="hover:text-gray-300">Home</a></li>
+                    <li><a href="./pages/development.html" class="hover:text-gray-300">Development</a></li>
+                    <li><a href="./pages/collections.html" class="hover:text-gray-300">Collections</a></li>
+                    <li><a href="./pages/contact.html" class="hover:text-gray-300">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main class="mt-10">
@@ -69,9 +76,9 @@
             <div class="picture-section">
                 <!-- This picture is sample -->
                 <picture>
-                    <source media="(min-width: 1200px)" srcset="./assets/images/ThisisKenta.png">
-                    <source media="(min-width: 768px)" srcset="./assets/images/ThisisKenta-small.png">
-                    <source media="(min-width: 400px)" srcset="./assets/images/ThisisKenta-verySmall.png">
+                    <source media="(min-width: 1200px)" srcset="./assets/images/ThisisKenta.webp">
+                    <source media="(min-width: 768px)" srcset="./assets/images/ThisisKenta-small.webp">
+                    <source media="(min-width: 400px)" srcset="./assets/images/ThisisKenta-verySmall.webp">
 
                     <img id="headshot" src="./assets/images/ThisisKenta.png" class="max-w-80 lg:max-w-96 h-auto">
                 </picture>
@@ -86,7 +93,8 @@
         <article class="p-10 mt-10">
             <h2 class="text-4xl text-[var(--accent-color)] font-bold text-center mb-10">Abilities</h2>
             <div class="grid grid-cols-2 gap-6 lg:flex lg:flex-row lg:justify-start lg:gap-10 lg:flex-wrap">
-                <div class="px-12 py-3 w-full min-h-80 lg:max-w-80 aspect-[1/1.1] rounded-xl bg-[var(--sub-color)] text-[var(--text-color)] text-xl lg:text-2xl">
+                <div
+                    class="px-12 py-3 w-full min-h-80 lg:max-w-80 aspect-[1/1.1] rounded-xl bg-[var(--sub-color)] text-[var(--text-color)] text-xl lg:text-2xl">
                     <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
                         stroke="currentColor" class="mx-auto mb-1 w-12 h-12 font-bold text-[var(--accent-color)]">
                         <path strokeLinecap="round" strokeLinejoin="round"
@@ -102,7 +110,8 @@
                     <h3 class="skill-title">Programming</h3>
                     <p class="skill-detail">10+ Experience Java, Javascript, HTML, SQL</p>
                 </div>
-                <div class="px-12 py-3 w-full min-h-80 aspect-[1/1.1] lg:max-w-80  rounded-xl bg-[var(--sub-color)] text-[var(--text-color)] text-xl lg:text-2xl">
+                <div
+                    class="px-12 py-3 w-full min-h-80 aspect-[1/1.1] lg:max-w-80  rounded-xl bg-[var(--sub-color)] text-[var(--text-color)] text-xl lg:text-2xl">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="mx-auto mb-1 w-12 h-12 font-bold text-[var(--accent-color)]">
                         <path stroke-linecap=" round" stroke-linejoin="round"
@@ -111,7 +120,8 @@
                     <h3 class="skill-title">Processing data</h3>
                     <p class="skill-detail">Exel, Gas etc.</p>
                 </div>
-                <div class="px-12 py-3 w-full min-h-80 lg:max-w-80 aspect-[1/1.1] rounded-xl  bg-[var(--sub-color)] text-[var(--text-color)] text-xl lg:text-2xl">
+                <div
+                    class="px-12 py-3 w-full min-h-80 lg:max-w-80 aspect-[1/1.1] rounded-xl  bg-[var(--sub-color)] text-[var(--text-color)] text-xl lg:text-2xl">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="mx-auto mb-1 w-12 h-12 font-bold text-[var(--accent-color)]">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -120,7 +130,8 @@
                     <h3 class="skill-title">Management</h3>
                     <p class="skill-detail">I served as the development leader</p>
                 </div>
-                <div class="px-12 py-3 w-full min-h-80 lg:max-w-80 aspect-[1/1.1] rounded-xl  bg-[var(--sub-color)] text-[var(--text-color)] text-xl lg:text-2xl">
+                <div
+                    class="px-12 py-3 w-full min-h-80 lg:max-w-80 aspect-[1/1.1] rounded-xl  bg-[var(--sub-color)] text-[var(--text-color)] text-xl lg:text-2xl">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="mx-auto mb-1 w-12 h-12 font-bold text-[var(--accent-color)]">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -131,7 +142,8 @@
                     <h3 class="skill-title">Photography</h3>
                     <p class="skill-detail">Also Videography</p>
                 </div>
-                <div class="px-12 py-3 w-full min-h-80 lg:max-w-80 aspect-[1/1.1] rounded-xl  bg-[var(--sub-color)] text-[var(--text-color)] text-xl lg:text-2xl">
+                <div
+                    class="px-12 py-3 w-full min-h-80 lg:max-w-80 aspect-[1/1.1] rounded-xl  bg-[var(--sub-color)] text-[var(--text-color)] text-xl lg:text-2xl">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="mx-auto mb-1 w-12 h-12 font-bold text-[var(--accent-color)]">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -140,7 +152,8 @@
                     <h3 class="skill-title">VideoEditing</h3>
                     <p class="skill-detail">Adobe Premiere</p>
                 </div>
-                <div class="px-12 py-3 w-full min-h-80 lg:max-w-80 aspect-[1/1.1] rounded-xl bg-[var(--sub-color)] text-[var(--text-color)] text-xl lg:text-2xl">
+                <div
+                    class="px-12 py-3 w-full min-h-80 lg:max-w-80 aspect-[1/1.1] rounded-xl bg-[var(--sub-color)] text-[var(--text-color)] text-xl lg:text-2xl">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="mx-auto mb-1 w-12 h-12 font-bold text-[var(--accent-color)]">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -153,35 +166,39 @@
         </article>
         <article class="p-10 mt-10">
             <h2 class="text-4xl text-[var(--accent-color)] font-bold text-center mb-10">Collections</h2>
-            <div class="grid grid-cols-2 gap-4 md:grid-cols-[repeat(8,1fr)] md:grid-cols-[repeat(3,1fr),1rem, 1rem] bg-[var(--sub-color)] p-10 rounded-lg mb-10">
+            <div
+                class="grid grid-cols-2 gap-4 md:grid-cols-[repeat(8,1fr)] md:grid-cols-[repeat(3,1fr),1rem, 1rem] bg-[var(--sub-color)] p-10 rounded-lg mb-10">
                 <div class="md:col-span-2 md:row-span-2 col-span-1 row-span-2">
-                    <img class="w-full h-full object-cover rounded-lg" src="./assets/images/240818_10.jpg"
+                    <img class="w-full h-full object-cover rounded-lg" src="./assets/images/240818_10.webp"
                         alt="Item 1" />
                 </div>
 
                 <div class="md:col-span-5 md:col-start-3 md:row-span-2 col-span-1">
-                    <img class="w-full h-full object-cover aspect-video rounded-lg" src="./assets/images/DSC00654-2.jpg"
+                    <img class="w-full h-full object-cover aspect-video rounded-lg" src="./assets/images/DSC00654-2.webp"
                         alt="Item 2" />
                 </div>
                 <div class="md:col-span-1 md:row-span-1 col-span-1">
-                    <img class="w-full h-full object-cover aspect-video rounded-lg" src="./assets/images/DSC01301.jpg"
+                    <img class="w-full h-full object-cover aspect-video rounded-lg" src="./assets/images/DSC01301.webp"
                         alt="Item 3" />
                 </div>
 
                 <div class="col-span-1 md:row-span-1 "><img class="w-full h-full object-cover aspect-square rounded-lg"
-                        src="./assets/images/DSC08872.jpg" alt="Item 4" />
+                        src="./assets/images/DSC08872.webp" alt="Item 4" />
                 </div>
                 <div class="col-span-1 md:row-span-2 "><img class="w-full h-full object-cover aspect-square rounded-lg"
-                        src="./assets/images/DSC00258.jpg" alt="Item 5" />
+                        src="./assets/images/DSC00258.webp" alt="Item 5" />
                 </div>
-                <div class="col-span-1 md:row-span-2 md:col-span-2"><img class="w-full h-full object-cover aspect-square rounded-lg"
-                        src="./assets/images/DSC03167.jpg" alt="Item 6" />
+                <div class="col-span-1 md:row-span-2 md:col-span-2"><img
+                        class="w-full h-full object-cover aspect-square rounded-lg" src="./assets/images/DSC03167.webp"
+                        alt="Item 6" />
                 </div>
-                <div class="col-span-1 md:row-span-2 md:col-span-3"><img class="w-full h-full object-cover aspect-square rounded-lg"
-                        src="./assets/images/DSC09261.jpg" alt="Item 7" />
+                <div class="col-span-1 md:row-span-2 md:col-span-3"><img
+                        class="w-full h-full object-cover aspect-square rounded-lg" src="./assets/images/DSC09261.webp"
+                        alt="Item 7" />
                 </div>
-                <div class="col-span-2 md:col-span-2 md:row-span-2 "><img class="w-full h-full object-cover aspect-square rounded-lg"
-                        src="./assets/images/DSC03774.jpg" alt="Item 8" /></div>
+                <div class="col-span-2 md:col-span-2 md:row-span-2 "><img
+                        class="w-full h-full object-cover aspect-square rounded-lg" src="./assets/images/DSC03774.webp"
+                        alt="Item 8" /></div>
                 <div class="text-center col-span-2 md:col-span-8 mt-6 items-center">
                     <button type="button" id="collectionRedirectButton"
                         class="py-3 px-6 text-md lg:text-3xl rounded-md font-bold text-[var(--accent-color)]">See
@@ -202,6 +219,7 @@
         <hr style="margin-bottom: 15px;">
         <span style="vertical-align: bottom;">&copy; 2025 My Website.</span>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

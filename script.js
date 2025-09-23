@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-// Select all accordion buttons on the page
+    // Select all accordion buttons on the page
     const buttons = document.querySelectorAll('.faq-button');
+    const menuButton = document.getElementById('nav-toggle');
+    const menuContainer = document.getElementById('menu-container');
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {
@@ -28,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // --- Open the accordion ---
                 // Set max-height to the content's full scroll height
                 content.style.maxHeight = content.scrollHeight + 'px';
-                
+
                 // Rotate the icon by 45 degrees
                 icon.classList.add('rotate-45');
 
@@ -43,14 +45,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    menuButton.addEventListener('click', () => {
+        // translate-x-full クラスをトグルする
+        menuContainer.classList.toggle('-translate-x-full');
+        menuButton.classList.toggle('menu-open');
+    });
 });
 
-    function toggleAccordion(id) {
-        const content = document.getElementById(`content-${id}`);
+function toggleAccordion(id) {
+    const content = document.getElementById(`content-${id}`);
 
-        // Tailwind の 'hidden' クラスをトグルする
-        content.classList.toggle('hidden');
+    // Tailwind の 'hidden' クラスをトグルする
+    content.classList.toggle('hidden');
 
-        // 💡 よりスムーズなアコーディオンアニメーションを実装する場合:
-        // transition クラスを使い、高さを 'max-h-0' から 'max-h-96' などに切り替える複雑な手法が必要です。
-    }
+    // 💡 よりスムーズなアコーディオンアニメーションを実装する場合:
+    // transition クラスを使い、高さを 'max-h-0' から 'max-h-96' などに切り替える複雑な手法が必要です。
+}

@@ -13,24 +13,30 @@
 <body style="background-color:#20355B;">
     <header class=" bg-[--bg-color] p-4 fixed top-0 w-full z-10">
         <nav aria-label="Primary navigation" class="flex justify-between items-center md:flex-row ">
-            <a href="#">
+            <a href="../index.html">
                 <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto md:h-9 md:min-w-[100px]">
             </a>
-            <label for="nav-toggle"
-                class="md:hidden inline-flex h-9 w-9 items-center justify-center z-20 cursor-pointer"
+            <label for="nav-toggle" id="nav-toggle"
+                class="fixed md:hidden top-4 left-4 block w-8 h-8 cursor-pointer hamburger-icon relative z-50"
                 aria-label="Open menu">
-                <svg class="h-8 w-8 text-[var(--accent-color)]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    aria-hidden="true">
-                    <path d="M4 6h20M4 12h20M4 18h20" />
-                </svg>
+                 <span class="block absolute top-0 left-0 w-6 h-1 bg-[var(--accent-color)] rounded-xl duration-300 transform -translate-x-1/2 -translate-y-1/2 peer-checked:opacity-0 "></span>
             </label>
             <ul class="hidden md:flex md:flex-row md:justify-between md:space-x-16 md:w-full md:px-[10rem]"
                 id="linkNav">
                 <li><a href="../index.html" class="navlink flex-1" id="current-page">Home</a></li>
-                <li><a href="development.html" class="navlink flex-1">Development</a></li>
-                <li><a href="collections.html" class="navlink flex-1">Collections</a></li>
+                <li><a href="./development.html" class="navlink flex-1">Development</a></li>
+                <li><a href="./collections.html" class="navlink flex-1">Collections</a></li>
                 <li><a href="#" class="navlink flex-1 mr-10">Contact</a></li>
             </ul>
+            <div id="menu-container"
+                class="fixed inset-0 bg-black bg-opacity-70 transform -translate-x-full transition-transform duration-500 ease-in-out z-40">
+                <ul class="flex flex-col items-center h-full space-y-8 text-white text-2xl font-bold mt-32">
+                    <li><a href="../index.html" class="hover:text-gray-300">Home</a></li>
+                    <li><a href="./development.html" class="hover:text-gray-300">Development</a></li>
+                    <li><a href="./collections.html" class="hover:text-gray-300">Collections</a></li>
+                    <li><a href="./contact.html" class="hover:text-gray-300">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main class="mt-10">
@@ -57,24 +63,65 @@
             </div>
             <button class="submit-btn" type="submit">Submit</button>
         </form>
-        <div class="faq-item border-t border-gray-200">
-            <button
-                class="faq-button flex justify-between items-center w-full py-4 text-left font-semibold text-gray-800 hover:text-indigo-600 transition duration-150">
-                <span class="text-lg">Q. What was the most challenging part of this project?</span>
+        <div class="faq-section mt-16 mb-16">
+            <div class="faq-item mt-8 pt-4 px-1 max-w-5xl mx-auto">
+                <button
+                    class="faq-button flex justify-between items-center w-full py-4 text-left font-semibold text-[var(--text-color)] hover:text-indigo-300 transition duration-150">
+                    <span class="text-lg">Q. What was the most challenging part of this project?</span>
 
-                <svg class="faq-icon w-6 h-6 text-gray-400 transition-transform duration-300" fill="none"
-                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-                </svg>
-            </button>
+                    <svg class="faq-icon w-6 h-6 text-gray-400 transition-transform duration-300" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                    <div class="pb-4 pt-0 text-gray-400">
+                        <p>
+                            A. The most challenging part was optimizing the site's performance for mobile devices.
+                            By leveraging Tailwind CSS and carefully managing asset loading, I was able to achieve a
+                            high-speed, responsive experience on all screen sizes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item mt-8 pt-4 px-1 max-w-5xl mx-auto">
+                <button
+                    class="faq-button flex justify-between items-center w-full py-4 text-left font-semibold text-[var(--text-color)] hover:text-indigo-300 transition duration-150">
+                    <span class="text-lg">Q. How do you learn new technologies?</span>
 
-            <div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-                <div class="pb-4 pt-0 text-gray-600">
-                    <p>
-                        A. The most challenging part was optimizing the site's performance for mobile devices.
-                        By leveraging Tailwind CSS and carefully managing asset loading, I was able to achieve a
-                        high-speed, responsive experience on all screen sizes.
-                    </p>
+                    <svg class="faq-icon w-6 h-6 text-gray-400 transition-transform duration-300" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                    <div class="pb-4 pt-0 text-gray-400">
+                        <p>
+                            A. I learn using a variety of tools that keep up with the times, such as YouTube and Udemy.
+                            Currently, I'm studying 3D graphics (Blender) on Coloso.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item mt-8 pt-4 px-1 max-w-5xl mx-auto">
+                <button
+                    class="faq-button flex justify-between items-center w-full py-4 text-left font-semibold text-[var(--text-color)] hover:text-indigo-300 transition duration-150">
+                    <span class="text-lg">Q. What are your future career plans?</span>
+
+                    <svg class="faq-icon w-6 h-6 text-gray-400 transition-transform duration-300" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                    <div class="pb-4 pt-0 text-gray-400">
+                        <p>
+                            A. Ultimately, I want to lead a company or an industry in a manager or more senior-level
+                            position. To achieve that, I'm continuously learning new technologies and staying curious.
+                            I'm striving to become a manager who can also contribute to solving challenges on the front
+                            lines of IT.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -89,9 +136,9 @@
             </ul>
         </nav>
         <hr style="margin-bottom: 15px;">
-        <span style="vertical-align: bottom;">&copy; 2025 My Website.</span>
-
+        <span style="vertical-align: bottom;">&copy; 2025 Onzoshi Website.</span>
     </footer>
+    <script src="../script.js"></script>
 </body>
 
 </html>
