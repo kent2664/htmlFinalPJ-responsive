@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     menuButton.addEventListener('click', () => {
-        // translate-x-full クラスをトグルする
         menuContainer.classList.toggle('-translate-x-full');
         menuButton.classList.toggle('menu-open');
     });
@@ -56,9 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function toggleAccordion(id) {
     const content = document.getElementById(`content-${id}`);
 
-    // Tailwind の 'hidden' クラスをトグルする
+    // toggle the 'hidden' class to show/hide the content
     content.classList.toggle('hidden');
 
-    // 💡 よりスムーズなアコーディオンアニメーションを実装する場合:
-    // transition クラスを使い、高さを 'max-h-0' から 'max-h-96' などに切り替える複雑な手法が必要です。
 }

@@ -1,6 +1,6 @@
 
 @layer components {
-    /* 疑似要素の共通スタイル */
+
     .hamburger-icon span,
     .hamburger-icon::before,
     .hamburger-icon::after {
@@ -14,17 +14,15 @@
         border-radius: 0.75rem; /* rounded-xl */
     }
 
-    /* 上の線 (::before) */
     .hamburger-icon::before {
         transform: translate(-50%, -50%) translateY(-0.5rem); /* top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -translate-y-2 */
     }
 
-    /* 下の線 (::after) */
     .hamburger-icon::after {
         transform: translate(-50%, -50%) translateY(0.5rem); /* top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 top-2 */
     }
 
-    /* メニュー開閉時のスタイル (JavaScriptで付与するクラス) */
+    /* menu toggle style */
     .hamburger-icon.menu-open span {
         opacity: 0;
     }
