@@ -89,14 +89,19 @@
                             </ul>
                         </td>
                     </tr>
-                    <tr class="accordion-header cursor-pointer" data-target="#content-1" onclick="toggleAccordion(2);">
+                    <tr class="accordion-header cursor-pointer" data-target="#content-2" onclick="toggleAccordion(2);">
                         <th> 2018</th>
                         <td> Named a leader of the OJT development team</td>
                         <td> Lead Programmer</td>
-                        <td><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                            </svg>
+                        <td>
+                            <div id="icon-wrapper"
+                                class="w-6 h-6 relative flex items-center justify-center transition-transform duration-300">
+                                <svg id="plus-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor"
+                                    class="w-full h-full text-gray-600 transition-transform duration-300">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                                </svg>
+                            </div>
                         </td>
                     </tr>
                     <tr id="content-2" class="accordion-content hidden">
