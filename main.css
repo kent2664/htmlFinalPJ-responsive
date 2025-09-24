@@ -1,41 +1,90 @@
 
-@layer components {
 
-    .hamburger-icon span,
-    .hamburger-icon::before,
-    .hamburger-icon::after {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 1.5rem; /* w-6 */
-        height: 0.25rem; /* h-1 */
-        background-color: var(--accent-color); /* accent */
-        transition: all 0.3s ease-in-out;
-        border-radius: 0.75rem; /* rounded-xl */
-    }
-
-    .hamburger-icon::before {
-        transform: translate(-50%, -50%) translateY(-0.5rem); /* top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -translate-y-2 */
-    }
-
-    .hamburger-icon::after {
-        transform: translate(-50%, -50%) translateY(0.5rem); /* top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 top-2 */
-    }
-
-    /* menu toggle style */
-    .hamburger-icon.menu-open span {
-        opacity: 0;
-    }
-
-    .hamburger-icon.menu-open::before {
-        transform: translate(-50%, -50%) rotate(45deg);
-    }
-
-    .hamburger-icon.menu-open::after {
-        transform: translate(-50%, -50%) rotate(-45deg);
-    }
+.hamburger-icon span,
+.hamburger-icon::before,
+.hamburger-icon::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1.5rem;
+    /* w-6 */
+    height: 0.25rem;
+    /* h-1 */
+    background-color: #E7BC72;
+    /* accent */
+    transition: all 0.3s ease-in-out;
+    border-radius: 0.75rem;
+    /* rounded-xl */
 }
 
+.hamburger-icon::before {
+    transform: translate(-50%, -50%) translateY(-0.5rem);
+    /* top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -translate-y-2 */
+}
+
+.hamburger-icon::after {
+    transform: translate(-50%, -50%) translateY(0.5rem);
+    /* top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 top-2 */
+}
+
+/* menu toggle style */
+.hamburger-icon.menu-open span {
+    opacity: 0;
+}
+
+.hamburger-icon.menu-open::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.hamburger-icon.menu-open::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+/* animation*/
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery-item {
+  opacity: 0; 
+  animation: fadeInSlideUp 0.8s ease forwards; 
+}
+
+.gallery-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.gallery-item:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.gallery-item:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.gallery-item:nth-child(4) {
+  animation-delay: 0.5s;
+}
+
+.gallery-item:nth-child(5) {
+  animation-delay: 0.6s;
+}
+
+.gallery-item:nth-child(6) {
+  animation-delay: 0.7s;
+}
+
+.gallery-item:nth-child(7) {
+  animation-delay: 0.8s;
+}
 /* Nav Links (nav > ul > li > a)*/
 .navlink:link,
 .navlink:visited {
@@ -53,6 +102,7 @@ header .navlink[href="#"] {
 .navlink:active {
     color: #9ED8DB;
 }
+
 /* End of navlink styles */
 
 .button-section button[type="submit"]:hover {
@@ -60,7 +110,7 @@ header .navlink[href="#"] {
     border-color: #28f4ff;
     border-width: 6px;
     box-shadow: 1px 1px 20px #87f9ff;
-} 
+}
 
 #experience {
     clear: both;
@@ -73,45 +123,11 @@ header .navlink[href="#"] {
     color: #FCEEF6;
 }
 
-/* .button-section button[type="submit"] {
-    height: 70px;
-    width: 200px;
-    font-size: 18px;
-    font-family: "Roboto", sans-serif;
-    color: #9ED8DB;
-    border: 3px solid #9ED8DB;
-    border-radius: 15px;
-    background-color: transparent;
-} */
-
 #form-contact {
     display: block;
     padding: 30px 30px;
     margin-top: 50px;
 }
-
-
-/* .collection {
-    background-color: #2c477a;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    gap: 50px;
-    padding: 100px;
-    height: 650px;
-    width: 100%;
-    border-radius: 15px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-}
-
-.collection img {
-    width: 300px;
-    height: 450px;
-    border-radius: 15px;
-    box-shadow: 3px 3px 8px #16233b;
-} */
 
 .dev-title {
     margin-top: 100px;
@@ -279,7 +295,7 @@ header .navlink[href="#"] {
     box-shadow: none;
     outline: none;
     justify-self: center;
-    align-self: bottom;
+    align-self: flex-end;
 
     font-family: "Roboto", sans-serif;
     font-weight: 500;

@@ -11,25 +11,12 @@
 </head>
 
 <body class="bg-[var(--main-color)]">
-    <!-- <header class="mt-10 mb-10">
-        <nav aria-label="Primary navigation">
-            <a href="#">
-                <img src="./assets/images/logo.png" alt="Logo">
-            </a>
-            <ul id="linkNav">
-                <li><a href="#" class="navlink" id="current-page">Home</a></li>
-                <li><a href="./pages/development.html" class="navlink">Development</a></li>
-                <li><a href="./pages/collections.html" class="navlink">Collections</a></li>
-                <li><a href="./pages/contact.html" class="navlink">Contact</a></li>
-            </ul>
-        </nav>
-    </header> -->
     <header class=" bg-[--bg-color] p-4 fixed top-0 w-full z-10">
         <nav aria-label="Primary navigation" class="flex justify-between items-center md:flex-row ">
             <a href="#">
                 <img src="./assets/images/logo.png" alt="Logo" class="h-8 w-auto md:h-9 md:min-w-[100px]">
             </a>
-            <label for="nav-toggle" id="nav-toggle"
+            <label id="nav-toggle"
                 class="fixed md:hidden top-4 left-4 block w-8 h-8 cursor-pointer hamburger-icon relative z-50"
                 aria-label="Open menu">
                  <span class="block absolute top-0 left-0 w-6 h-1 bg-[var(--accent-color)] rounded-xl duration-300 transform -translate-x-1/2 -translate-y-1/2 peer-checked:opacity-0 "></span>
@@ -69,8 +56,6 @@
                         class="py-3 px-3 text-sm border border-2 border-gray-400 rounded-md text-blue-200">Development</button>
                     <button id="jump-coll" type="submit"
                         class="py-3 px-3 text-sm border border-2 border-gray-400 rounded-md text-blue-200">Collections</button>
-                    <!-- <p id="experience">Experience</p>
-                    <p id="portfolio">Portfolio</p> -->
                 </div>
             </div>
             <div class="picture-section">
@@ -80,9 +65,9 @@
                     <source media="(min-width: 768px)" srcset="./assets/images/ThisisKenta-small.webp">
                     <source media="(min-width: 400px)" srcset="./assets/images/ThisisKenta-verySmall.webp">
 
-                    <img id="headshot" src="./assets/images/ThisisKenta.png" class="max-w-80 lg:max-w-96 h-auto">
+                    <img id="headshot" alt="head shot" src="./assets/images/ThisisKenta.webp" class="max-w-80 lg:max-w-96 h-auto">
                 </picture>
-                <svg class="absolute top-[13.4rem] right-[3rem] lg:top-[13.4rem] lg:right-[2rem] w-80 h-80 md:w-[22rem] md:h-[22rem]  lg:w-[28rem] lg:h-[28rem] text-[var(--sub-color)] opacity-60 z-[-10]"
+                <svg class="absolute top-[13.4rem] right-[3rem] lg:top-[13.4rem] lg:right-[2rem] w-80 h-80 md:w-[22rem] md:h-[22rem] lg:w-[28rem] lg:h-[28rem] text-[var(--sub-color)] opacity-60 z-[-10]"
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
                     <circle cx="50" cy="50" r="50" />
                 </svg>
@@ -93,16 +78,11 @@
             <div class="grid grid-cols-2 gap-6 lg:flex lg:flex-row lg:justify-start lg:gap-10 lg:flex-wrap">
                 <div
                     class="px-12 py-3 w-full min-h-80 lg:max-w-80 aspect-[1/1.1] rounded-xl bg-[var(--sub-color)] text-[var(--text-color)] text-xl lg:text-2xl">
-                    <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-Width={1.5}
                         stroke="currentColor" class="mx-auto mb-1 w-12 h-12 font-bold text-[var(--accent-color)]">
-                        <path strokeLinecap="round" strokeLinejoin="round"
-                            d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
-                    </svg> -->
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-                        stroke="currentColor" class="mx-auto mb-1 w-12 h-12 font-bold text-[var(--accent-color)]">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3"
+                        <path stroke-Linecap="round" stroke-Linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3"
                             class="animate-path-draw" />
-                        <path strokeLinecap="round" strokeLinejoin="round"
+                        <path stroke-Linecap="round" stroke-Linejoin="round"
                             d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
                     </svg>
                     <h3 class="skill-title">Programming</h3>
@@ -202,7 +182,7 @@
                         class="py-3 px-6 text-md lg:text-3xl rounded-md font-bold text-[var(--accent-color)]">See
                         More... >></button>
                 </div>
-
+            </div>
         </article>
     </main>
     <footer>
